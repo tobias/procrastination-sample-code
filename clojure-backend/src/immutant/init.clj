@@ -35,6 +35,7 @@
 
 
 (msg/start "/queue/async")
+(msg/start "/queue/results")
 
 (msg/listen "/queue/async"
             (fn [m]
