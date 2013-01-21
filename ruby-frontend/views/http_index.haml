@@ -1,0 +1,15 @@
+%h2 Over http
+%form{:method => 'get', :action => '/h'}
+  k1:v1, k2:v2, ...
+  %input{:type => 'text', :name => 'data', :value => @original_data}
+  %br/
+  %br/
+  %input{:type => 'submit', :value => 'Haminize!'}
+
+- if @result
+  %h3 result:
+  = @result.inspect
+  %br/
+
+- if @time
+  == time: #{@time * 1000} ms

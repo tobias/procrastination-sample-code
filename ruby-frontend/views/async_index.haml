@@ -1,0 +1,16 @@
+%h2 over async messaging
+%form{:method => 'get', :action => '/a'}
+  k1:v1, k2:v2, ...
+  %input{:type => 'text', :name => 'data', :value => @original_data}
+  %br/
+  %br/
+  %input{:type => 'submit', :value => 'Haminize!'}
+
+- if @recent_results
+  %h3 recent results:
+  - @recent_results.each do |r|
+    = r.inspect
+    %br/
+
+- if @time
+  == time: #{@time * 1000} ms
