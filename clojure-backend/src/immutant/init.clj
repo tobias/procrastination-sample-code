@@ -7,9 +7,9 @@
 
 (msg/start "/queue/sync")
 
-(msg/respond "/queue/sync"
-             (fn [m]
-               (haminize-map (:message m))))
+(msg/respond "/queue/sync" haminize-map)
+
+
 
 
 
