@@ -7,7 +7,7 @@
 
 (msg/start "/queue/sync")
 
-(msg/respond "/queue/sync" haminize-map)
+(msg/respond "/queue/sync" haminize)
 
 
 
@@ -40,5 +40,5 @@
 (msg/listen "/queue/async"
             (fn [m]
               (msg/publish "/queue/results"
-                           (haminize-map m)
+                           (haminize m)
                            :encoding :edn)))

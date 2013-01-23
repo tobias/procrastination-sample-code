@@ -2,7 +2,7 @@ require 'rest-client'
 require 'edn'
 
 get '/h' do
-  if data = extract_data_param
+  if data = params["data"]
     benchmark do
       @result =
         EDN.read(RestClient.get('http://localhost:8080/backend',

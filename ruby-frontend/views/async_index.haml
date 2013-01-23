@@ -1,7 +1,6 @@
 %h2 over async messaging
 %form{:method => 'get', :action => '/a'}
-  k1:v1, k2:v2, ...
-  %input{:type => 'text', :name => 'data', :value => @original_data}
+  %input{:type => 'text', :name => 'data', :value => params['data']}
   %br/
   %br/
   %input{:type => 'submit', :value => 'Haminize!'}

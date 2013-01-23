@@ -1,7 +1,7 @@
 require 'torquebox-messaging'
 
 get '/m' do
-  if data = extract_data_param
+  if data = params["data"]
     benchmark do
       @result =
         TorqueBox::Messaging::Queue.new("/queue/sync").
